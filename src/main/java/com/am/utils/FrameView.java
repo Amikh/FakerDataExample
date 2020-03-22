@@ -97,9 +97,7 @@ public class FrameView {
 	/**
 	 * 
 	 * Method for check enter only numbers
-	 * 
 	 * param str
-	 * 
 	 * return
 	 * 
 	 */
@@ -117,13 +115,9 @@ public class FrameView {
 	/**
 	 * 
 	 * Function for check if first number is present
-	 * 
 	 * this is for using uniq number in the feature
-	 * 
 	 * when we need to work with DB
-	 * 
 	 * param str
-	 * 
 	 * return
 	 * 
 	 */
