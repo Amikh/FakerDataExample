@@ -13,7 +13,7 @@ public class FakerData {
 	 * 
 	 */
 
-	private Faker faker = new Faker(new Locale("en"));
+	private final Faker faker = new Faker(new Locale("en"));
 
 	/**
 	 * 

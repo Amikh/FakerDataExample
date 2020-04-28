@@ -8,7 +8,7 @@ public class GenerateData {
 
 static String result;
 
-     static void isdataPerson(String inputNumber){
+     static void isDataPerson(String inputNumber){
         List<String> listPersonData = new ArrayList<String>();
         FakerData fd = new FakerData();
         Person p = new Person();
@@ -34,12 +34,12 @@ static String result;
         listPersonData.add(p.getCity());
         listPersonData.add(p.getCountry());
         listPersonData.add(tmpstr);
-       result=printstring(listPersonData.toString());
+       result= isPrintString(listPersonData.toString());
 
     }
 
 
-   private static String printstring(String tx){
+   private static String isPrintString(String tx){
       int endindex = tx.length();
       String  ntext = tx.substring(1,endindex-1);
       System.out.println(ntext);

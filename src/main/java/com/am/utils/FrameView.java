@@ -15,23 +15,15 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class FrameView {
-
 	/* Field for output data */
-
-	private JTextArea ta;
-
+	private final JTextArea ta;
 	/* Field fro enter number */
-
-	private JTextField textfield;
-
+	private final JTextField textfield;
 	/* Field input */
-
 	private String inputNumber;
-
-	private List<String> listForCheck = new ArrayList<String>();
+	private final List<String> listForCheck = new ArrayList<String>();
 
 	public FrameView() {
-
 		/* Main Frame */
 		JFrame f = new JFrame("Person data");
 		ta = new JTextArea();
@@ -51,7 +43,6 @@ public class FrameView {
 		textfield.setBounds(100, 50, 130, 30);
 		// Button
 		/* Button for running function */
-
 		JButton b = new JButton("Submit");
 		b.setBounds(300, 50, 150, 30);
 		ta.setBounds(5, 5, 100, 200);
@@ -74,7 +65,7 @@ public class FrameView {
 				if (indexPresent) {
 					boolean index = isNumeric(inputNumber);
 					if (index) {
-						GenerateData.isdataPerson(inputNumber);
+						GenerateData.isDataPerson(inputNumber);
 						ta.append(GenerateData.result + "\n");
 						textfield.setText("");
 					} else {
@@ -101,7 +92,6 @@ public class FrameView {
 	 * return
 	 * 
 	 */
-
 	private boolean isNumeric(String str) {
 		try {
 			Double.parseDouble(str);
@@ -121,7 +111,6 @@ public class FrameView {
 	 * return
 	 * 
 	 */
-
 	private boolean isNumberPresent(String str) {
 		for (String s : listForCheck) {
 			if (str.equals(s)) {
@@ -129,7 +118,6 @@ public class FrameView {
 				return false;
 			}
 		}
-
 		listForCheck.add(str);
 		return true;
 
