@@ -23,7 +23,7 @@ public class FrameView {
 	private String inputNumber;
 	private final List<String> listForCheck = new ArrayList<String>();
 
-	public FrameView() {
+	public FrameView() throws Exception{
 		/* Main Frame */
 		JFrame f = new JFrame("Person data");
 		ta = new JTextArea();
@@ -65,7 +65,11 @@ public class FrameView {
 				if (indexPresent) {
 					boolean index = isNumeric(inputNumber);
 					if (index) {
-						GenerateData.isDataPerson(inputNumber);
+						try {
+							GenerateData.isDataPerson(inputNumber);
+						} catch (Exception exception) {
+							exception.printStackTrace();
+						}
 						ta.append(GenerateData.result + "\n");
 						textfield.setText("");
 					} else {

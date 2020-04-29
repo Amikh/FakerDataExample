@@ -46,6 +46,7 @@ out/
 target/
 .classpath
 .project
+config.properties
 
 ##############################
 ## Eclipse
